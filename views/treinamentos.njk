@@ -1,0 +1,35 @@
+{% extends "layout.njk" %} 
+
+{% block head %}
+
+    <title>Conteúdos | Meu Primeiro HTML</title>
+    
+{% endblock %} 
+
+{% block content %}
+
+    <div class="wrapper">
+    <h1>Cursos Oferecidos</h1>
+    </div>
+
+    <section class="cards-cursos"> 
+
+        {% for item in items %}
+        <div class="curso" id="{{ item.id }}">
+            <div class="image-cursos">
+                <img src="{{item.image}}" alt="Imagem de {{item.title}}">
+            </div>
+            <div class="details">
+                <h1>{{ item.title }}</h1>
+                <p class="text1">{{ item.subtitle }}</p>
+                <p>{{ item.description }}</p>   
+            </div>
+            
+        </div>
+        {% endfor %}
+
+    </section>
+
+    <script src="/scripts-curso.js"></script>
+
+{% endblock %}

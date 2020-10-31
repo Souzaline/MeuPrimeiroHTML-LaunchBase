@@ -1,0 +1,280 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap";
+
+:root {
+    --color-white: #e1e1e6;
+    --color-primary: #8257e5;
+    --color-secondary: #fd951f;
+    --color-background: #121214;
+    --color-background-header: #202024;
+}
+
+* { margin: 0;
+    padding: 0;
+    border: 0;
+}
+body {
+    background: var(--color-background);
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-white);
+}
+header {
+    padding: 0px;
+    background: var(--color-background-header);                
+}
+
+.links {
+    text-align: center;
+    color: var(--color-white);
+    padding: 20px;
+    cursor: pointer;
+}
+
+.links a {
+    color: var(--color-white);
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0 15px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.links a:hover {
+    color: var(--color-primary);
+    transition: color 300ms;
+}
+
+#wrapper {
+    text-align: center;
+    padding: 32px;
+} 
+
+#wrapper img {
+    border-radius: 50%;
+    border: 5px solid var(--color-primary);
+    margin-bottom: 10px;
+    height: 250px;
+}
+
+#wrapper h1 {
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--color-secondary);
+}
+
+#wrapper h2 {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+#wrapper p {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 750px;
+    margin: 16px auto;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    font-size: 18px;
+    line-height: 24px;
+    display: inline;
+    margin: 0 8px;
+    font-weight: 500;
+    color: var(--color-secondary);
+}
+
+#footer a {
+    border-bottom: 1px solid var(--color-primary);
+}
+
+h1 {
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: bold;
+    margin: 30px;
+    color: var(--color-secondary);
+    text-align: center;
+}
+
+.cards {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    background-color: rgb(70, 64, 64);
+    cursor: pointer;
+    border-radius: 16px;
+    display: grid;
+    text-align: center;
+}
+
+.card-image img {
+    width: 100%;
+    border-radius: 16px 16px 0 50%;
+}
+
+.card-title,
+.card-info {
+    padding: 10px;
+    text-align-last: center;
+}
+
+.card-info {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-info p {
+    align-items: center;
+    display: flex;
+}
+
+.card-info i {
+    margin-right: 4px;
+}
+
+.author {
+    background-color: var(--color-primary);
+    filter: brightness(90%);
+    padding: 5px ;
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+    justify-content: center;
+}
+
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background-color: var(--color-white);
+    width: 90%;
+    height: 90%;
+    margin: 5vh auto;
+    position: relative;
+}
+
+.modal.maximized {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.modal .close-modal {
+    color: black;
+    position: absolute;
+    right: 6px;
+    top: 8px;
+    cursor: pointer;
+}
+
+.modal .maximize {
+    color: black;
+    position: absolute;
+    right: 50px;
+    top: 8px;
+    cursor: pointer;
+}
+
+.modal-overlay.active  {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content iframe {
+    width: 100%;
+    height: 93%;
+    position: absolute;
+    top: 7%;
+}
+
+#error h1 {
+    font-size: 55px;
+}
+
+#error p {
+    text-align: center;
+    font-size: 40px;
+}
+
+.cards-cursos {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    text-align: center;
+}
+
+.cards-cursos img {
+    width: auto;
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    padding: 20px;
+}
+
+.details h1 {
+    color: white;
+    margin-bottom: 0;
+}
+
+.text1 {
+    padding-bottom: 15px;
+}
+
+.details p {
+    padding-bottom: 40px;
+    font-size: 20px;
+}
+
+.curso {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.card-curso-container {
+    position: relative;
+    padding-top: 62.5%;
+    display: flex;
+    align-items: center;
+}
+
+.card-curso-container iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.curso:hover {
+    background-color: rgb(70, 64, 64);
+    cursor: pointer;
+    border-radius: 16px;
+    display: grid;
+    text-align: center;
+}

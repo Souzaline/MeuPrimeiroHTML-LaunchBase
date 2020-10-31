@@ -1,0 +1,28 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Sobre | Meu Primeiro HTML</title>
+{% endblock %}
+
+
+{% block content %}
+    <div id="wrapper">
+        <img src='{{about.avatar_url}}' alt="logo">
+        <h1>{{about.name}}</h1>
+        <h2>{{about.role}}</h2>
+        <p>{{about.description}}</p>
+
+        <ul>
+            <li>JavaScript</li>
+            <li>CSS</li>
+            <li>HTML</li>
+        </ul>
+    </div>
+
+    <div id="footer" class="links">
+        {% for link in about.links %}
+        <a href='{{link.url}}' target="_blank">{{link.name}}</a>
+        {% endfor %}
+    </div>
+
+{% endblock %}
